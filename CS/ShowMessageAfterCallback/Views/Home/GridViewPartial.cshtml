@@ -1,0 +1,28 @@
+@using ShowMessageAfterCallback.Controllers;
+
+@Html.DevExpress().GridView(settings => {
+    settings.Name = "grid";
+    
+    settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewPartial" };
+
+    settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Home", Action = "GridViewPartialAddNew" };
+    settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Home", Action = "GridViewPartialUpdate" };
+    settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Home", Action = "GridViewPartialDelete" };
+
+    settings.CommandColumn.Visible = true;
+    settings.CommandColumn.ShowNewButton = true;
+    settings.CommandColumn.ShowEditButton = true;
+    settings.CommandColumn.ShowDeleteButton = true;
+
+    settings.KeyFieldName = "ID";
+    settings.Columns.Add("Text");
+
+    settings.CustomJSProperties = (s, e) => {
+        if (ViewData[HomeController.EditResultKey] != null) {
+            e.Properties["cpMessage"] = ViewData[HomeController.EditResultKey].ToString();
+        }
+    };
+
+    settings.ClientSideEvents.EndCallback = "OnEndCallback";
+    
+}).SetEditErrorText((string)ViewData[HomeController.EditErrorKey]).Bind(Model).GetHtml()
