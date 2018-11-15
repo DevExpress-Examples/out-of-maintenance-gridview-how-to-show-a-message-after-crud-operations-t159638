@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/ShowMessageAfterCallback/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/ShowMessageAfterCallback/Controllers/HomeController.vb))
+* [Model.cs](./CS/ShowMessageAfterCallback/Models/Model.cs) (VB: [Model.vb](./VB/ShowMessageAfterCallback/Models/Model.vb))
+* **[GridViewPartial.cshtml](./CS/ShowMessageAfterCallback/Views/Home/GridViewPartial.cshtml)**
+* [Index.cshtml](./CS/ShowMessageAfterCallback/Views/Home/Index.cshtml)
+<!-- default file list end -->
 # GridView - How to show a message after CRUD operations
 
 
