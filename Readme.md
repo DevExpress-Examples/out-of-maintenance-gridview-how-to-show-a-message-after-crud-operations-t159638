@@ -8,7 +8,7 @@
 <!-- default file list end -->
 # GridView - How to show a message after CRUD operations
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t159638)**
+**[[Run Online]](https://codecentral.devexpress.com/t159638/)**
 <!-- run online end -->
 
 
